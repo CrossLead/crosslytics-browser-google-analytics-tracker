@@ -674,9 +674,9 @@ cross-spawn@^5.0.1, cross-spawn@^5.1.0:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
-crosslytics@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/crosslytics/-/crosslytics-1.1.0.tgz#2efdb339438219351247a1904e334230b4eb994c"
+crosslytics@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/crosslytics/-/crosslytics-2.0.0.tgz#8318ef717528d142b0f3963bc83e70cde56446c2"
 
 cryptiles@2.x.x:
   version "2.0.5"

@@ -4,10 +4,10 @@ import sourceMaps from 'rollup-plugin-sourcemaps'
 const pkg = require('./package.json')
 const camelCase = require('lodash.camelcase')
 
-const libraryName = 'crosslytics-browser-boilerplate-tracker'
+const libraryName = 'crosslytics-browser-google-analytics-tracker'
 
 export default {
-  entry: `compiled/${libraryName}.js`,
+  entry: `compiled/index.js`,
   targets: [
 	  { dest: pkg.main, moduleName: camelCase(libraryName), format: 'umd' },
 	  { dest: pkg.module, format: 'es' }

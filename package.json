@@ -1,17 +1,17 @@
 {
-  "name": "crosslytics-browser-boilerplate-tracker",
+  "name": "crosslytics-browser-google-analytics-tracker",
   "version": "0.0.0",
   "description": "",
   "keywords": [],
-  "main": "dist/crosslytics-browser-boilerplate-tracker.umd.js",
-  "module": "dist/crosslytics-browser-boilerplate-tracker.es5.js",
-  "typings": "dist/types/crosslytics-browser-boilerplate-tracker.d.ts",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es5.js",
+  "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/CrossLead/crosslytics-browser-boilerplate-tracker.git"
+    "url": "https://github.com/CrossLead/crosslytics-browser-google-analytics-tracker.git"
   },
   "author": {
     "name": "Christian Yang",
@@ -25,7 +25,7 @@
   "scripts": {
     "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
-    "build": "tsc && rollup -c && rimraf compiled && typedoc --out dist/docs --target es6 --theme minimal src",
+    "build": "tsc && rollup -c && rimraf compiled && typedoc --out dist/docs --target es5 --theme minimal src",
     "start": "tsc-watch --onSuccess \"rollup -c\"",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -80,7 +80,7 @@
     "commitizen": "^2.9.6",
     "coveralls": "^2.13.1",
     "cross-env": "^5.0.1",
-    "crosslytics": "^1.1.0",
+    "crosslytics": "^2.0.0",
     "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.14.0",
     "jest": "^20.0.4",
@@ -108,6 +108,6 @@
     "singleQuote": true
   },
   "peerDependencies": {
-    "crosslytics": "^1.1.0"
+    "crosslytics": "^2.0.0"
   }
 }

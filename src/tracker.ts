@@ -1,4 +1,4 @@
-import { Identity, TrackedEvent, Tracker } from 'crosslytics'
+import { Identity, Page, TrackedEvent, Tracker } from 'crosslytics'
 
 export class SampleTracker implements Tracker {
   constructor(public id: string) {
@@ -15,4 +15,6 @@ export class SampleTracker implements Tracker {
     // Submit event data to your 3rd party service here. Example:
     // this.googleAnalytics.event(event.name, event.category);
   }
+
+  public async page(page: Page) {}
 }

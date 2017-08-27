@@ -1,4 +1,4 @@
-import { SampleTracker } from '../src/crosslytics-browser-boilerplate-tracker'
+import { SampleTracker } from '../src'
 
 /**
  * Tracker test
