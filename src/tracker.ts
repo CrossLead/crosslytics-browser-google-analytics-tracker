@@ -20,9 +20,9 @@ export class GoogleAnalyticsTracker implements Tracker {
     // Lightly modified Google Analytics snippet for Typescript and to not use globals
     ;((i, s, o: 'script', g, r: 'ga') => {
       i.GoogleAnalyticsObject = r
-      // tslint:disable-next-line:only-arrow-functions
       ;(i[r] =
         i[r] ||
+        // tslint:disable-next-line:only-arrow-functions
         (function() {
           ;(i[r].q = i[r].q || []).push(arguments)
         } as any)), (i[r].l = Number(new Date()))
