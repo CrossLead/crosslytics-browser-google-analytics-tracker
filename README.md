@@ -1,9 +1,8 @@
-# crosslytics-browser-boilerplate-tracker
-Boilerplate for making a Crosslytics browser tracker
+# crosslytics-browser-google-analytics-tracker
+[![Build Status](https://travis-ci.org/CrossLead/crosslytics-browser-google-analytics-tracker.svg?branch=master)](https://travis-ci.org/CrossLead/crosslytics-browser-google-analytics-tracker?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/CrossLead/crosslytics-browser-google-analytics-tracker/badge.svg?branch=master)](https://coveralls.io/github/CrossLead/crosslytics-browser-google-analytics-tracker?branch=master)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-## Usage
-1. Get a copy of the repo by doing one of the following:
-  - [Forking](#fork-destination-box)
-  - [Duplicating without forking](https://help.github.com/articles/duplicating-a-repository/)
-  - [Importing as a new repository](https://github.com/new/import)
-2. Edit [src/tracker.ts](src/tracker.ts) with your tracker's implementation
+Browser Crosslytics Tracker for Google Analytics
+
+This tracker is featured in the usage examples of the [main Crosslytics repository](https://github.com/CrossLead/crosslytics#usage).
