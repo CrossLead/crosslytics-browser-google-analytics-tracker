@@ -41,17 +41,22 @@ export class GoogleAnalyticsTracker implements Tracker {
   }
 
   public persistentParams: UniversalAnalytics.FieldsObject
-  protected ga: UniversalAnalytics.ga
+
+  /**
+   * Store reference to window rather than window.ga since GA snippet
+   * overwrites the window reference.
+   */
+  protected w: Window
 
   constructor(public id: string, w = window) {
     assertGa(w)
     this.persistentParams = {}
-    this.ga = w.ga
-    this.ga('create', this.id, 'auto')
+    this.w = w
+    this.w.ga('create', this.id, 'auto')
   }
 
   public identify(identity: Identity) {
-    this.ga('set', 'userId', identity.userId)
+    this.w.ga('set', 'userId', identity.userId)
   }
 
   public async track<T>(event: TrackedEvent<T>) {
@@ -65,7 +70,7 @@ export class GoogleAnalyticsTracker implements Tracker {
     }
 
     return new Promise<void>(resolve => {
-      this.ga('send', 'event', {
+      this.w.ga('send', 'event', {
         ...this.persistentParams,
         ...params,
         hitCallback: resolve
@@ -81,7 +86,7 @@ export class GoogleAnalyticsTracker implements Tracker {
     }
 
     return new Promise<void>(resolve => {
-      this.ga('send', 'pageview', {
+      this.w.ga('send', 'pageview', {
         ...this.persistentParams,
         ...params,
         hitCallback: resolve
