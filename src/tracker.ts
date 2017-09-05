@@ -45,12 +45,13 @@ export class GoogleAnalyticsTracker implements Tracker {
 
   constructor(public id: string, w = window) {
     assertGa(w)
+    this.persistentParams = {}
     this.ga = w.ga
     this.ga('create', this.id, 'auto')
   }
 
   public identify(identity: Identity) {
-    this.ga('set', 'uid', identity.userId)
+    this.ga('set', 'userId', identity.userId)
   }
 
   public async track<T>(event: TrackedEvent<T>) {
