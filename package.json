@@ -1,7 +1,7 @@
 {
   "name": "crosslytics-browser-google-analytics-tracker",
   "version": "0.0.4",
-  "description": "",
+  "description": "Browser Crosslytics Tracker for Google Analytics",
   "keywords": [],
   "main": "dist/index.umd.js",
   "module": "dist/index.es5.js",
