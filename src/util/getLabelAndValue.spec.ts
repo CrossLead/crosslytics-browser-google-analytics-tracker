@@ -7,7 +7,7 @@ interface LightsaberArgs {
   'Inscription'?: string
 }
 
-class LightsaberBuilt extends TrackedEvent<LightsaberArgs> {
+class LightsaberBuilt implements TrackedEvent<LightsaberArgs> {
   public name = 'Lightsaber Built'
   public category = 'Lightsabers'
   public argPriority = new Array<keyof LightsaberArgs>(
@@ -15,6 +15,7 @@ class LightsaberBuilt extends TrackedEvent<LightsaberArgs> {
     'Color',
     'Blades'
   )
+  constructor(public args: LightsaberArgs) {}
 }
 
 describe('getLabelAndValue test', () => {

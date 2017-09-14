@@ -1,6 +1,6 @@
 {
   "name": "crosslytics-browser-google-analytics-tracker",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Browser Crosslytics Tracker for Google Analytics",
   "keywords": [],
   "main": "dist/index.umd.js",
@@ -81,7 +81,7 @@
     "commitizen": "^2.9.6",
     "coveralls": "^2.13.1",
     "cross-env": "^5.0.1",
-    "crosslytics": "^2.0.0",
+    "crosslytics": "3.0.0",
     "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.14.0",
     "jest": "^20.0.4",
@@ -109,6 +109,6 @@
     "singleQuote": true
   },
   "peerDependencies": {
-    "crosslytics": "^2.0.0"
+    "crosslytics": "^3.0.0"
   }
 }
