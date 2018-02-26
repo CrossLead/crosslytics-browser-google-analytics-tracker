@@ -10,6 +10,9 @@ const assertGa = (window: Window) => {
 }
 
 export class GoogleAnalyticsTracker implements Tracker {
+
+  public static SAMPLE_SIZE = 1;
+
   /**
    * Initialize the overall ga() command queue. Equivalent to pasting
    * the Google Analytics snippet into your markup.
@@ -52,7 +55,9 @@ export class GoogleAnalyticsTracker implements Tracker {
     assertGa(w)
     this.persistentParams = {}
     this.w = w
-    this.w.ga('create', this.id, 'auto')
+    this.w.ga('create', this.id, 'auto', {
+      siteSpeedSampleRate: GoogleAnalyticsTracker.SAMPLE_SIZE
+    })
   }
 
   public identify(identity: Identity) {
